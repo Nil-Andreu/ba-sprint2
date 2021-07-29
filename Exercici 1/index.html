@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <!--For bootstrap with CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+
+    <!--For bootstrap with Download-->
+    <!--<link rel="stylesheet" type="text/css" href="./css/bootstrap.css">-->
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.svg" alt="" width="30" height="24">
+            </a>
+            <!--Button for modal, where is gonig to behave as a modal and the target of this is the login id-->
+            <button type="button" class=" btn btn-link" href="#" data-toggle="modal" data-target="#login">
+                LogIn
+            </button>
+
+            <button type="button" class=" btn btn-link" href="#" data-toggle="modal" data-target="#signin">
+                Sign In
+            </button>
+
+            <!--Where data toggle is which action is going to make, and data target to which id div is going to collapse-->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarbutton">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarbutton">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#me">Who am I?</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#portfolio">Portfolio</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Modal Login -->
+    <!--Modal itself, which is going to fade to appear, and is going to have the id of login-->
+
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <!--We put now inside the characteristics of the modal-->
+
+            <div class="modal-content">
+
+                <!--Header of the modal-->
+
+                <div class="modal-header">
+                    <h5 class="modal-title" id="login">Log In</h5>
+
+                    <!--A button to close the modal-->
+
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!--Body of the modal-->
+
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="logemail" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="logemail" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="logpassword" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                    </form>
+                </div>
+
+                <!--Footer of the modal-->
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SignIn -->
+    <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signin">SignIn</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="namesign" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="namesign">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailsign" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="emailsign" aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="passwordsign" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="passwordsign">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remembersign">
+                            <label class="form-check-label" for="remembersign">Remember me</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Sign me up!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="me">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 section_height ">
+                    <h1 class="align-middle">Hi, it's Nil!</h1>
+                    <p class="align-middle">I am learning software engineering by myself. I aspire to build great
+                        applications. I am also tatking a carreer of Business Administration at PomPeu Fabra, in the 4th
+                        year</p>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 section_height">
+                    <img src="./img/background.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="container-fluid" id="#section">
+            <div class="row text-center">
+                <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">This is my portfolio</h3>
+                <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">Check the following images</p>
+
+                <div class="row">
+
+                    <div class="carousel slide col" id="portfolio" data-ride="carousel">
+
+                        <!--Indicators-->
+                        <ul class="carousel-indicators">
+                            <li data-target="portfolio" data-slide-to="0" class="active"></li>
+                            <li data-target="portfolio" data-slide-to="1"></li>
+                            <li data-target="portfolio" data-slide-to="2"></li>
+                            <li data-target="portfolio" data-slide-to="3"></li>
+                        </ul>
+                        <!--Images itself-->
+                        <div class="carousel-inner">
+
+                            <!--Item for each image-->
+                            <div class="carousel-item active">
+                                <!--We put fluid image as we want to adapt the image to the width of viewport-->
+                                <img src="./img/portfolio1.jpg" class="img-fluid">
+                                <div class="carousel-caption">
+                                    <p>Statistics dashboard</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/portfolio2.jpg" class="img-fluid">
+                                <div class="carousel-caption">
+                                    <p>Statistics dashboard</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/portfolio3.jpg" class="img-fluid">
+                                <div class="carousel-caption">
+                                    <p>Statistics dashboard</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="./img/portfolio4.jpg" class="img-fluid">
+                                <div class="carousel-caption">
+                                    <p>Statistics dashboard</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Controls left and right-->
+                        <a href="#portfolio" class="carousel-control-prev left" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span></a>
+
+                        <a href="#portfolio" class="carousel-control-next right" data-slide="next">
+                            <span class="carousel-control-next-icon"></span></a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    <!--For bootstrap with CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+
+
+    <!--For bootstrap with Download-->
+    <!--<script src="./js/bootstrap.min.js"></script>-->
+
+</body>
+
+</html>
